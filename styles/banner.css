@@ -1,21 +1,21 @@
-.banner{
+.banner {
     text-align: center;
     color: var(--branco);
     padding: 2.5em 2em;
     background: var(--azul-degrade);
 }
 
-.banner__titulo{
+.banner__titulo {
     font-size: 18px;
     font-weight: 700;
 }
 
-.banner__texto{
+.banner__texto {
     font-weight: 500;
     margin: 1em 0;
 }
 
-.banner__pesquisa{
+.banner__pesquisa {
     color: var(--branco);
     background-color: transparent;
     border: 1px solid var(--branco);
@@ -24,7 +24,7 @@
     width: 100%;
 }
 
-.banner__pesquisa::placeholder{
+.banner__pesquisa::placeholder {
     font-family: var(--font-princiapl);
     font-size: 14px;
     font-weight: 400;
@@ -32,4 +32,18 @@
     background: url(../assests/lupa.svg) no-repeat;
     background-position: 1em;
     text-align: center;
+}
+
+@media screen and (min-width:1024px) {
+    .banner__titulo{
+        font-size: 36px;
+    }
+
+    .banner__pesquisa{
+        width: 50%;
+    }
+
+    .banner__pesquisa::placeholder{
+        background-position: 7em;
+    }
 }

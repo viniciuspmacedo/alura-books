@@ -1,28 +1,29 @@
-.cabecalho{
+.cabecalho {
     display: flex;
     background-color: var(--branco);
     align-items: center;
     justify-content: space-between;
     position: relative;
 }
-.container{
+
+.container {
     display: flex;
     align-items: center;
 }
 
-.container__botao{
+.container__botao {
     display: none;
 }
 
-.container__botao:checked~.lista-menu{
+.container__botao:checked~.lista-menu {
     display: block;
 }
 
-.container__imagem{
+.container__imagem {
     padding: 1em;
 }
 
-.cabecalho__menu-hamburguer{
+.cabecalho__menu-hamburguer {
     background-image: url(../assests/menu.svg);
     background-position: center;
     background-repeat: no-repeat;
@@ -31,27 +32,90 @@
     display: inline-block;
 }
 
-.lista-menu{
+.lista-menu {
     position: absolute;
     display: none;
     top: 100%;
     width: 60vw;
 }
-.lista-menu__titulo, .lista-menu__item{
+
+.lista-menu__titulo,
+.lista-menu__item {
     padding: 1em;
     background-color: var(--branco);
 }
 
-.lista-menu__titulo{
+.lista-menu__titulo {
     color: var(--laranja);
     font-weight: 700;
 }
 
-.lista-menu__link{
+.lista-menu__link {
     text-decoration: none;
     background: var(--azul-degrade);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-transform: uppercase;
+}
+
+.container__titulo {
+    display: none;
+}
+
+.opcoes {
+    display: none;
+}
+
+@media screen and (min-width: 1024px) {
+
+    .cabecalho {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .container__titulo {
+        font-family: var(--fonte-secundaria);
+        font-size: 30px;
+        margin-left: 10px;
+        display: block;
+    }
+
+    .container__titulo--negrito {
+        font-weight: 700;
+    }
+
+    .container__item-transparente {
+        display: none;
+    }
+
+    .cabecalho__menu-hamburguer {
+        display: none;
+    }
+
+    .opcoes {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .opcoes__item {
+        padding: 0 2em;
+        text-transform: uppercase;
+    }
+
+    .opcoes__link {
+        color: var(--preto);
+        text-decoration: none;
+    }
+
+    .opcoes__botao{
+        display: none;
+    }
+
+    .opcoes__botao:checked~.lista-menu{
+        display: block;
+        width: auto;
+    }
+
 }

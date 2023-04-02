@@ -82,15 +82,8 @@
 
     .swiper-button-prev,
     .swiper-button-next {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: var(--branco);
-        position: absolute;
-        top: 55%;
-        background: var(--azul-degrade);
-        padding: 1em;
-        border-radius: 50%;
+        display: block;
+        top: 60%;
     }
 
     .swiper-slide img {
@@ -102,11 +95,11 @@
     }
 
     .swiper {
-        margin-top: 2em;
+        width: 60%;
     }
 
     .card {
-        width: 60%;
+        width: 50%;
         margin: 2em auto;
     }
 
@@ -115,4 +108,26 @@
         padding: 3em 0 1em 0;
     }
 
+}
+
+@media screen and (min-width: 1728px) {
+    
+    .carrossel__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        margin:  2em 10vw;
+    }
+
+    .swiper-wrapper {
+        margin: 2em;
+    }
+
+    .swiper {
+        margin: 4em 2em;
+    }
+
+    .card {
+        width: 50%;
+    }
 }

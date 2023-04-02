@@ -19,6 +19,14 @@
     display: block;
 }
 
+.container__botao:checked~.container__rotulo>.cabecalho__menu-hamburguer {
+    background-image: url(../assests/menu-branco.svg);
+}
+
+.container__botao:checked~.container__rotulo {
+    background: var(--azul-degrade);
+}
+
 .container__imagem {
     padding: 1em;
 }
@@ -60,6 +68,10 @@
 }
 
 .container__titulo {
+    display: none;
+}
+
+.container__texto {
     display: none;
 }
 
@@ -118,4 +130,50 @@
         width: auto;
     }
 
+    .opcoes__botao:checked~.opcoes__rotulo>.opcoes__item {
+        background: var(--azul-degrade);
+        color: var(--branco);
+    }
+
+    .container__texto {
+        display: none;
+    }
+
+    .opcoes__item {
+        padding: 1em 1em;
+    }
+
+    .lista-menu__item:hover {
+        background: var(--azul-degrade);
+    }
+
+    .lista-menu__item:hover>.lista-menu__link {
+        -webkit-text-fill-color: var(--branco);
+        text-decoration: none;
+    }
+
+}
+
+@media screen and (min-width: 1728px) {
+    .cabecalho {
+        padding: 0 5em;
+    }
+    .opcoes {
+        flex-grow: 1;
+        justify-content: left;
+        margin-left: 2em;
+    }
+
+    .container__texto {
+        display: block;
+    }
+
+    .container__link{
+        display: flex;
+        text-decoration: none;
+        color: var(--preto);
+        justify-content: center;
+        align-items: center;
+        padding: 0 1em;
+    }
 }
